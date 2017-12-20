@@ -32,18 +32,18 @@ print( int * ptr, unsigned int size )
 }
 
 void
-CountingSort(int * & a, unsigned int n){
+CountingSort(int * & ptr, unsigned int n){
     int c[256];
     for (int i = 0; i < 256; i++){
         c[i] = 0;
     }
     for (int i = 0; i < n; i++) {
-        c[a[i]] = c[a[i]] + 1;
+        c[ptr[i]] = c[ptr[i]] + 1;
     }
         int b = 0;
         for (int j = 0; j < 256; j++) {
             for (int i = 0; i < c[j]; i++) {
-                a[b] = j;
+                ptr[b] = j;
                 b++;
 
             }
